@@ -37,6 +37,8 @@ def generate_image(prompt: str) -> str:
                 os.makedirs(output_path)
             image_path = os.path.join(output_path, f"gemini_image_{int(time.time())}.png")
             image.save(image_path)
+            image = Image.open(image_path)  # Reopen the saved image
+            image.show()  # Show the image
             print(f"Image saved to: {image_path}")
             return image_path
     
