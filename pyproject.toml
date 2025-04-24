@@ -1,10 +1,21 @@
 [project]
-name = "image-gen"
+name = "gemini-img-gen-mcp"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.11"
-dependencies = [
-    "genai>=2.1.0",
-    "mcp[cli]>=1.6.0",
+description = "MCP server for generating images using Google's Gemini model"
+authors = [
+    {name = "MalluBeast69", email = "your.email@example.com"},
 ]
+dependencies = [
+    "mcp[cli]>=0.5.0",
+    "google-generativeai>=0.3.0",
+    "Pillow>=10.0.0",
+]
+requires-python = ">=3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []

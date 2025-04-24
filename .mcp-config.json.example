@@ -1,0 +1,14 @@
+{
+    "mcpServers": {
+        "content_gen": {
+            "command": "mcp",
+            "args": ["run", "./server.py"],
+            "env": {
+                "GEMINI_API_KEY": "your-api-key-here",
+                "OUTPUT_IMAGE_PATH": "./generated_images"
+            },
+            "transportType": "stdio",
+            "autoApprove": []
+        }
+    }
+} 
